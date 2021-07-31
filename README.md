@@ -2,6 +2,18 @@
 
 Docker image with Kicad, KiBot, Pandoc and LaTeX to be used with continuous integration services for electronics projects.
 
+## Usage
+
+```bash
+# Kicad 5
+docker run --rm --volume="$PWD:/pwd:z" -it ghcr.io/rleh/kicad5_and_pandoc:latest
+# Run Kibot...
+
+# Kicad 5
+docker run --rm --volume="$PWD:/pwd:z" -it ghcr.io/rleh/kicad6_and_pandoc:latest
+# Run Kibot...
+```
+
 ## Manually build docker images
 
 Prerequisites: Setup [docker authentication for ghcr.io](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry)!

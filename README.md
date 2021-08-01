@@ -9,7 +9,7 @@ Docker image with Kicad, KiBot, Pandoc and LaTeX to be used with continuous inte
 docker run --rm --volume="$PWD:/pwd:z" -it ghcr.io/rleh/kicad5_and_pandoc:latest
 # Run Kibot...
 
-# Kicad 5
+# Kicad 6
 docker run --rm --volume="$PWD:/pwd:z" -it ghcr.io/rleh/kicad6_and_pandoc:latest
 # Run Kibot...
 ```

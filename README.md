@@ -20,7 +20,6 @@ Prerequisites: Setup [docker authentication for ghcr.io](https://docs.github.com
 
 ```bash
 # kicad5_and_pandoc
-docker pull setsoft/kicad_auto:latest
 docker build -t ghcr.io/rleh/kicad5_and_pandoc:latest - < kicad5_and_pandoc.Dockerfile
 docker push ghcr.io/rleh/kicad5_and_pandoc:latest
 

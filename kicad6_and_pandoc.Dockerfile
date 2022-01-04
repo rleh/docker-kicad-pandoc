@@ -1,4 +1,3 @@
-#FROM setsoft/kicad_auto:nightly
 FROM ubuntu:20.04
 
 ENV TZ=Europe/Amsterdam
@@ -33,6 +32,5 @@ RUN curl -s https://api.github.com/repos/INTI-CMNB/KiAuto/releases/latest | grep
     rm -rf /var/lib/apt/lists/* /*.deb
 
 RUN pip install --no-compile  git+https://github.com/rleh/KiBot@v6
-
 
 LABEL org.opencontainers.image.source https://github.com/rleh/docker-kicad-pandoc

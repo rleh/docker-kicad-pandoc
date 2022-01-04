@@ -11,8 +11,10 @@ RUN apt-get -q update && \
 
 # Kicad
 RUN	apt-get -y update && \
-    apt-get -y install --no-install-recommends software-properties-common make wget curl rar bzip2 librsvg2-bin imagemagick python3-qrcodegen python3-pip git \
-    libngspice0 kicad kicad-symbols kicad-footprints kicad-packages3d && \
+    apt-get -y install --no-install-recommends software-properties-common make wget curl rar bzip2 librsvg2-bin imagemagick python3-qrcodegen python3-pip git && \
+    add-apt-repository --yes ppa:kicad/kicad-5.1-releases && \
+    apt-get -y update && \
+    apt-get -y install --no-install-recommends libngspice0 kicad kicad-symbols kicad-footprints kicad-packages3d && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/* /*.deb
 

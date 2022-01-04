@@ -25,7 +25,6 @@ docker build -t ghcr.io/rleh/kicad5_and_pandoc:latest - < kicad5_and_pandoc.Dock
 docker push ghcr.io/rleh/kicad5_and_pandoc:latest
 
 # kicad6_and_pandoc
-docker pull setsoft/kicad_auto:nightly
 docker build -t ghcr.io/rleh/kicad6_and_pandoc:latest - < kicad6_and_pandoc.Dockerfile
 docker push ghcr.io/rleh/kicad6_and_pandoc:latest
 ```

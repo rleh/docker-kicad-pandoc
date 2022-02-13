@@ -1,4 +1,4 @@
-name: Build docker images kicad5_and_pandoc and kicad6_and_pandoc
+name: Build docker image kicad6_and_pandoc
 
 on:
   push:
@@ -41,14 +41,3 @@ jobs:
           tags: |
             ghcr.io/rleh/kicad6_and_pandoc:${{ env.VERSION }}
             ghcr.io/rleh/kicad6_and_pandoc:latest
-
-      - name: Build and push kicad5_and_pandoc
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: ./kicad5_and_pandoc.Dockerfile
-          platforms: linux/amd64
-          push: true
-          tags: |
-            ghcr.io/rleh/kicad5_and_pandoc:${{ env.VERSION }}
-            ghcr.io/rleh/kicad5_and_pandoc:latest
